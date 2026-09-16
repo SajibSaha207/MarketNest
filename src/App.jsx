@@ -1,6 +1,8 @@
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 import Login from "./pages/Login"
+import Signup from "./pages/Signup"
+import Register from "./pages/Signup"
 
 
 function App() {
@@ -8,7 +10,7 @@ function App() {
 
   return (
     <>
-    <Login></Login>
+  <Signup></Signup>
     </>
   )
 }
