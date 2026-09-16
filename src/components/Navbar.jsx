@@ -1,4 +1,4 @@
-import React from 'react';
+
 import logo from '../assets/Logo.png';
 import { ImSearch } from 'react-icons/im';
 import { GoGift } from 'react-icons/go';
@@ -24,7 +24,7 @@ const Navbar = () => {
           />
 
           <h4 className="text-xl font-bold ml-8">
-            Market<span className="text-orange-500">Nest</span>
+            <span className='text-[#008C99]'>Market</span><span className="text-orange-500">Nest</span>
           </h4>
         </div>
 
