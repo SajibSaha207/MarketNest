@@ -1,5 +1,6 @@
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
+import Login from "./pages/Login"
 
 
 function App() {
@@ -7,8 +8,7 @@ function App() {
 
   return (
     <>
-    < Navbar></Navbar>
-     <Footer></Footer>
+    <Login></Login>
     </>
   )
 }
