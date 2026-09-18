@@ -18,13 +18,13 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center pl-5">
           <img
-            className="h-[40px] w-[105px]"
+            className="h-[70px] w-[120px]"
             src={logo}
             alt="MarketNest"
           />
-
-          <h4 className="text-xl font-bold ml-8">
-            <span className='text-[#008C99]'>Market</span><span className="text-orange-500">Nest</span>
+{/* #008C99 */}
+          <h4 className="text-xl font-bold -ml-7">
+            <span className='text-brand'>Market</span><span className="text-orange-500">Nest</span>
           </h4>
         </div>
 

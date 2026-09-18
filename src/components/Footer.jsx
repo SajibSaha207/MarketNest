@@ -15,15 +15,15 @@ const Footer = () => {
 
           {/* Brand */}
           <div>
-            <Link to="/" className="mb-5 flex items-center gap-3">
+            <Link to="/" className="mb-5 flex items-center ">
              <img
-                         className="h-[40px] w-[105px]"
+                         className="h-[70px] w-[120px]"
                          src={logo}
                          alt="MarketNest"
                        />
 
-              <span className="text-xl font-extrabold text-white">
-               <span className="text-[#008C99]">Market</span><span className="text-orange-500">Nest</span>
+              <span className="text-xl font-bold -ml-7">
+               <span className="text-brand">Market</span><span className="text-orange-500">Nest</span>
               </span>
             </Link>
 
@@ -153,7 +153,7 @@ const Footer = () => {
                 className="min-w-0 flex-1 bg-transparent px-3 py-3 text-sm outline-none placeholder:text-slate-500"
               />
 
-              <button className="bg-[#008C99] px-4 text-sm font-semibold text-white cursor-pointer">
+              <button className="bg-component px-4 text-sm font-semibold text-white cursor-pointer">
                 Subscribe
               </button>
             </div>

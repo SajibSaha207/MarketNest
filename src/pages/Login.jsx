@@ -1,7 +1,10 @@
-import React from 'react';
+
+import { useForm } from 'react-hook-form';
 import Navbar from '../components/Navbar';
 
+
 const Login = () => {
+  const {register, handleSubmit, formState:{errors},}= useForm()
     return (
         <div>
             <Navbar></Navbar>
@@ -33,7 +36,7 @@ const Login = () => {
                     <h2 className='ml-6 mt-2'>Forgate Password?</h2>
                   </div>
                   <div className='mt-2'>
-                    <button className="btn bg-orange-500 w-[420px] ml-6 ">
+                    <button className="btn bg-component w-[420px] ml-6 ">
                   Login
                 </button>
                   </div>
@@ -47,11 +50,12 @@ const Login = () => {
 
                   </div>
                   <p>
-                    <h2 className='font-bold ml-6 mt-2'>Don't have account ? <span className='text-pink-500 cursor-pointer'>Sign up</span></h2>
+                    <h5 className=' ml-6 mt-2'>Don't have account ? <span className='text-pink-500 cursor-pointer'>Sign up</span></h5>
                   </p>
             </div>
-            
+              
         </div>
+      
         </div>
     );
 };

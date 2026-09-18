@@ -1,4 +1,5 @@
-import React from 'react';
+
+import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
 const Signup = () => {
@@ -46,7 +47,7 @@ const Signup = () => {
                 </div>
                  
                   <div className='mt-2'>
-                    <button className="btn bg-orange-500 w-[420px] ml-6 ">
+                    <button className="btn bg-component w-[420px] ml-6 ">
                   Sign up
                 </button>
                   </div>
@@ -60,11 +61,12 @@ const Signup = () => {
 
                   </div>
                   <p>
-                    <h2 className='font-bold ml-6 mt-2'>Already have an account ? <span className='text-pink-500 cursor-pointer'>Login</span></h2>
+                    <p className='text-center ml-6 mt-2'>Already have an account ? <span className='text-pink-500 cursor-pointer'>Login</span></p>
                   </p>
             </div>
             
         </div>
+        <Footer></Footer>
         </div>
     );
 };
