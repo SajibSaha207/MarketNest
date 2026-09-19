@@ -7,13 +7,13 @@ import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged,
 
 const provider = new GoogleAuthProvider();
 
-const AuthProvider = ({ Children }) => {
+const AuthProvider = ({ children }) => {
     const [loading, setLoading]= useState(true);
     const [user, setUser]= useState(null);
 
     const registerUser = (email, password)=>{
         setLoading(true)
-        return createUserWithEmailAndPassword(AuthProvider, email, password)
+        return createUserWithEmailAndPassword(auth, email, password)
     }
 
     const signinUser =(email, password)=>{
@@ -58,7 +58,7 @@ const AuthProvider = ({ Children }) => {
     }
     return (
         <AuthContext value ={authInfo}>
-            {Children}
+            {children}
         </AuthContext>
     );
 };

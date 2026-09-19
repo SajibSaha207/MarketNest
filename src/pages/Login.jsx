@@ -7,7 +7,6 @@ const Login = () => {
   const {register, handleSubmit, formState:{errors},}= useForm()
     return (
         <div>
-            <Navbar></Navbar>
 
             <div className='min-h-screen bg-base-300 py-10 px-125'>
                 <div className='card bg-base-100 px-4 pb-8 shadow-2xl rounded-4xl '>
