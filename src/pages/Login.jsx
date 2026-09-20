@@ -1,63 +1,233 @@
+import { useForm } from "react-hook-form";
 
-import { useForm } from 'react-hook-form';
-import Navbar from '../components/Navbar';
+import { toast } from "react-hot-toast";
+
+import { Link, useLocation, useNavigate } from "react-router";
+
+import useAuth from "../hooks/useAuth";
+
+import SocialLogin from "../pages/SocialLogin/SocialLogin";
+
+
+
 
 
 const Login = () => {
-  const {register, handleSubmit, formState:{errors},}= useForm()
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm();
+
+    const { signinUser, loading, setLoading } = useAuth();
+
+    const location = useLocation();
+
+    const navigate = useNavigate();
+
+    const handleSing = (data) => {
+
+        signinUser(data.email, data.password)
+
+            .then((result) => {
+
+                console.log(result.user);
+
+                toast.success("Welcome back to MessHub! 🎉", {
+                    duration: 3000,
+                    style: {
+                        borderRadius: "12px",
+                        background: "#D5FBF9",
+                        color: "#173B3A",
+                        border: "1px solid #006B68",
+                        fontWeight: "600",
+                    },
+                    iconTheme: {
+                        primary: "#006B68",
+                        secondary: "#ffffff",
+                    },
+                });
+
+                navigate(location?.state || "/");
+
+            })
+
+            .catch((error) => {
+
+                console.log(error);
+
+                toast.error("Login failed. Please check your email and password.", {
+                    duration: 3500,
+                    style: {
+                        borderRadius: "12px",
+                        background: "#ffffff",
+                        color: "#173B3A",
+                        border: "1px solid #FF8A00",
+                        fontWeight: "600",
+                    },
+                    iconTheme: {
+                        primary: "#FF8A00",
+                        secondary: "#ffffff",
+                    },
+                });
+
+            }).finally(() => {
+
+                setLoading(false);
+
+            });
+
+    };
+
     return (
+
         <div>
 
-            <div className='min-h-screen bg-base-300 py-10 px-125'>
-                <div className='card bg-base-100 px-4 pb-8 shadow-2xl rounded-4xl '>
-                    <h2 className='font-bold text-2xl ml-5 py-5'>Welcome Back to MarketNest</h2>
+            <div className="min-h-screen bg-base-300 px-4 py-6 sm:px-6 sm:py-8 md:px-10 md:py-10 lg:px-16">
 
-                     <label className="label text-black font-bold ml-6">Email address</label>
-                <input 
-                  type="email" 
-                  name='email' 
-                   
-                  className="input w-[420px] ml-6" 
-                  placeholder="Enter your Email" 
-                />
+                <div className="card mx-auto w-full max-w-2xl rounded-2xl bg-base-100 px-4 pb-6 shadow-2xl sm:rounded-3xl sm:px-6 sm:pb-8 md:px-8 lg:px-10">
 
-                <label className="label text-black font-bold ml-6">Password</label>
+                    <h2 className="py-5 text-center text-xl font-bold sm:text-2xl md:text-3xl">
+                        Welcome Back to MarketNest
+                    </h2>
 
-                <div className='relative w-[420px] ml-6'>
-                  <input 
-                    type='password' 
-                    name='password' 
-                    className="input w-full" 
-                    placeholder="Password" 
-                  />
+                    <form onSubmit={handleSubmit(handleSing)} className="space-y-5">
+
+                        <div>
+
+                            <label
+                                htmlFor="email"
+                                className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-neutral"
+                            >
+                                Email Address
+                            </label>
+
+                            <input
+                                id="email"
+                                type="email"
+                                {...register("email", { required: true })}
+                                placeholder="you@example.com"
+                                className="w-full min-w-0 rounded-xl border border-gray-200 bg-white px-3 py-3 text-sm text-neutral outline-none transition-all duration-200 placeholder:text-gray-400 focus:border-primary focus:ring-4 focus:ring-primary/10 sm:px-4"
+                            />
+
+                            {errors.email?.type === "required" && (
+
+                                <p className="mt-1.5 text-xs font-medium text-red-500">
+                                    Email is required.
+                                </p>
+
+                            )}
+
+                        </div>
+
+
+                        {/* Password */}
+
+                        <div>
+
+                            <div className="mb-1.5 flex items-center justify-between">
+
+                                <label
+                                    htmlFor="password"
+                                    className="text-xs font-bold uppercase tracking-wide text-neutral"
+                                >
+                                    Password
+                                </label>
+
+                            </div>
+
+                            <input
+                                id="password"
+                                type="password"
+                                {...register("password", {
+                                    required: true,
+                                    minLength: 6,
+                                    maxLength: 8,
+                                })}
+                                placeholder="Enter your password"
+                                className="w-full min-w-0 rounded-xl border border-gray-200 bg-white px-3 py-3 text-sm text-neutral outline-none transition-all duration-200 placeholder:text-gray-400 focus:border-primary focus:ring-4 focus:ring-primary/10 sm:px-4"
+                            />
+
+                            {errors.password?.type === "required" && (
+
+                                <p className="mt-1.5 text-xs font-medium text-red-500">
+                                    Please enter your password.
+                                </p>
+
+                            )}
+
+                            {errors.password?.type === "minLength" && (
+
+                                <p className="mt-1.5 text-xs font-medium text-red-500">
+                                    Password must contain at least 6 characters.
+                                </p>
+
+                            )}
+
+                            {errors.password?.type === "maxLength" && (
+
+                                <p className="mt-1.5 text-xs font-medium text-red-500">
+                                    Password must contain maximum 8 characters.
+                                </p>
+
+                            )}
+
+                            <a
+                                href="#"
+                                className="mt-2 inline-block text-xs font-semibold text-primary transition-colors hover:text-secondary"
+                            >
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+
+                        {/* Login Button */}
+
+                        <button
+                            type="submit"
+                            disabled={loading}
+                            className="w-full rounded-xl bg-component px-5 py-3 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-md active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60"
+                        >
+                            {loading ? "Logging in…" : "Login"}
+                        </button>
+
+                    </form>
+
+
+                    <div className="divider px-2 sm:px-4">
+                        OR
+                    </div>
+
+
+                    <div className="w-full">
+                        <SocialLogin></SocialLogin>
+                    </div>
+
+
+                    <p className="mt-5 border-gray-100 pt-5 text-center text-xs text-slate-500 sm:text-sm">
+
+                        Don't have an account?{" "}
+
+                        <Link
+                            state={location.state}
+                            to="/register"
+                            className="font-bold text-primary transition-colors hover:text-secondary"
+                        >
+                            Create account
+                        </Link>
+
+                    </p>
+
                 </div>
-                  <div>
-                    <h2 className='ml-6 mt-2'>Forgate Password?</h2>
-                  </div>
-                  <div className='mt-2'>
-                    <button className="btn bg-component w-[420px] ml-6 ">
-                  Login
-                </button>
-                  </div>
-                  <div className="divider px-4">OR</div>
-                  
-                  <div className=''>
-                    <button className="btn bg-white text-black border-[#e5e5e5] w-[420px] ml-6">
-  <svg aria-label="Google logo" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g><path d="m0 0H512V512H0" fill="#fff"></path><path fill="#34a853" d="M153 292c30 82 118 95 171 60h62v48A192 192 0 0190 341"></path><path fill="#4285f4" d="m386 400a140 175 0 0053-179H260v74h102q-7 37-38 57"></path><path fill="#fbbc02" d="m90 341a208 200 0 010-171l63 49q-12 37 0 73"></path><path fill="#ea4335" d="m153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55"></path></g></svg>
-  Login with Google
-</button>
 
-                  </div>
-                  <p>
-                    <h5 className=' ml-6 mt-2'>Don't have account ? <span className='text-pink-500 cursor-pointer'>Sign up</span></h5>
-                  </p>
             </div>
-              
-        </div>
-      
+
         </div>
     );
 };
+
 
 
 export default Login;
