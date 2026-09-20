@@ -19,6 +19,7 @@ import {
   User,
   Phone,
   Lock,
+  Mail
 } from "lucide-react";
 
 const Signup = () => {
@@ -130,30 +131,12 @@ const Signup = () => {
 
     return (
         <div>
-      
-
-        {/* Badge */}
-            <div className="mb-3">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-background px-3 py-1 text-[10px] font-bold tracking-[0.12em] uppercase text-primary">
-                    <span className="h-1.5 w-1.5 rounded-full bg-brand" />
-                    New MarketNest Account
-                </span>
-            </div>
-
-            {/* Heading */}
-            <div className="mb-6">
-                <h1 className="text-[1.75rem] font-extrabold leading-tight tracking-tight text-neutral">
-                    Create your account
-                </h1>
-                <p className="mt-1.5 text-sm leading-relaxed text-slate-500">
-                    Join thousands of verified shoppers discovering authentic products and independent creators.
-                </p>
-            </div>
-
             <div className='min-h-screen bg-base-300 py-10 px-125'>
                 <div className='card bg-base-100 px-4 pb-8 shadow-2xl rounded-4xl '>
                     <h2 className='font-bold text-2xl ml-5 py-5'>Create Your Account</h2>
-
+                    {/* <p className=" text-sm leading-relaxed text-slate-500">
+                    Join thousands of verified shoppers discovering authentic products and independent creators.
+                </p> */}
                       {/* Profile Photo */}
             <div className="mb-5">
                 <label
@@ -213,7 +196,7 @@ const Signup = () => {
                                 required: "Full name is required",
                             })}
                             type="text"
-                            placeholder="e.g. Arif Billah"
+                            placeholder="e.g. Sajib Saha"
                             className="w-full bg-transparent px-3 py-2.5 text-sm text-neutral outline-none placeholder:text-gray-400"
                         />
                     </div>
@@ -256,25 +239,31 @@ const Signup = () => {
                       <label className="label text-black font-bold ml-6">Name</label>
                 <input type="text" name='name' className="input w-[420px] ml-6" placeholder="Name" /> */}
 
-                     <label className="label text-black font-bold ml-6">Email address</label>
-                <input 
-                 {...register("email", {
-                            required: "Email is required",
-                            pattern: {
-                                value: /^\S+@\S+\.\S+$/,
-                                message: "Enter a valid email address",
-                            },
-                        })}
-                  type="email" 
-                  className="input w-[420px] ml-6 outline-none" 
-                  placeholder="Enter your Email" 
-                />
-
-                  {errors.email && (
-                    <p className="mt-1 text-[10px] font-medium text-red-500">
-                        {errors.email.message}
-                    </p>
-                )}
+           <div>
+                    <label className="mb-1.5 block text-[10px] font-bold uppercase tracking-wide text-neutral mt-2">
+                        Email Address
+                    </label>
+                    <div className="flex items-center rounded-xl border border-gray-200 bg-white px-3 transition-all focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/10">
+                        <Mail size={15} className="shrink-0 text-gray-400" />
+                        <input
+                            {...register("email", {
+                                required: "Email is required",
+                                pattern: {
+                                    value: /^\S+@\S+\.\S+$/,
+                                    message: "Enter a valid Email address",
+                                },
+                            })}
+                            type="email"
+                            placeholder="example@gmail.com"
+                            className="w-full bg-transparent px-3 py-2.5 text-sm text-neutral outline-none placeholder:text-gray-400"
+                        />
+                    </div>
+                    {errors.phone && (
+                        <p className="mt-1 text-[10px] font-medium text-red-500">
+                            {errors.phone.message}
+                        </p>
+                    )}
+                </div>
  {/* Password + Confirm Password */}
             <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
 
@@ -385,7 +374,7 @@ const Signup = () => {
                 type="button"
                 onClick={handleSubmit(handleRegister)}
                 disabled={loading}
-                className="mt-5 flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-md active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60"
+                className="mt-5 flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-component px-5 py-3 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5  hover:shadow-md active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60"
             >
                 {loading ? (
                     <>
@@ -402,7 +391,7 @@ const Signup = () => {
                   <div className="divider px-4">OR</div>
                   
                   <div className=''>
-                    <button className="btn bg-white text-black border-[#e5e5e5] w-[420px] ml-6">
+                    <button className="btn bg-white text-black border-[#e5e5e5] w-full ml-">
   <svg aria-label="Google logo" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g><path d="m0 0H512V512H0" fill="#fff"></path><path fill="#34a853" d="M153 292c30 82 118 95 171 60h62v48A192 192 0 0190 341"></path><path fill="#4285f4" d="m386 400a140 175 0 0053-179H260v74h102q-7 37-38 57"></path><path fill="#fbbc02" d="m90 341a208 200 0 010-171l63 49q-12 37 0 73"></path><path fill="#ea4335" d="m153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55"></path></g></svg>
   Login with Google
 </button>
