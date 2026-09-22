@@ -13,6 +13,7 @@ import {
   FiStar,
   FiTruck,
 } from "react-icons/fi";
+import bannerImg from "../../../../assets/Homebanner.png";
 
 const stats = [
   { value: "1,840+", label: "Verified Sellers" },
@@ -34,12 +35,18 @@ const HeroBanner = () => {
     <section className="px-4 py-10 sm:px-6 lg:px-8">
       <div className="relative">
         {/* ===== Dark Hero ===== */}
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 px-6 pb-16 pt-8 sm:px-10 sm:pt-10">
+        <div
+          className="relative overflow-hidden rounded-3xl bg-slate-950 bg-cover bg-center px-6 pb-16 pt-8 sm:px-10 sm:pt-10"
+          style={{ backgroundImage: `url(${bannerImg})` }}
+        >
+          {/* Dark overlay so text stays readable on top of the photo */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-950/80 to-indigo-950/70" />
+
           {/* Decorative glow */}
           <div className="pointer-events-none absolute -right-24 top-0 h-72 w-72 rounded-full bg-indigo-500/20 blur-3xl" />
           <div className="pointer-events-none absolute left-1/3 bottom-0 h-56 w-56 rounded-full bg-purple-500/10 blur-3xl" />
 
-          <div className="relative grid gap-10 lg:grid-cols-2 lg:items-start">
+          <div className="relative z-10 grid gap-10 lg:grid-cols-2 lg:items-start">
             {/* ----- Left: Text content ----- */}
             <div>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-indigo-500/90 px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white">
