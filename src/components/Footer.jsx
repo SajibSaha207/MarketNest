@@ -17,7 +17,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="mb-5 flex items-center ">
              <img
-                         className="h-[70px] w-[120px]"
+                         className="h-[80px] w-[140px]"
                          src={logo}
                          alt="MarketNest"
                        />

@@ -21,7 +21,7 @@ const normalClass = "text-gray-600 hover:text-blue-600 whitespace-nowrap";
 
         {/* Logo */}
         <div className="flex items-center flex-shrink-0">
-          <img className="h-[50px] w-[90px]" src={logo} alt="MarketNest" />
+          <img className="h-[80px] w-[140px]" src={logo} alt="MarketNest" />
           <h4 className="text-xl font-bold -ml-5">
             <span className='text-brand'>Market</span>
             <span className="text-orange-500">Nest</span>
