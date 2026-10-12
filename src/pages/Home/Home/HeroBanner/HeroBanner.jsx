@@ -2,7 +2,6 @@ import {
   FiClock,
   FiArrowRight,
   FiGrid,
-  FiShield,
   FiPackage,
   FiMonitor,
   FiUser,
@@ -10,10 +9,14 @@ import {
   FiCpu,
   FiFeather,
   FiDroplet,
-  FiStar,
-  FiTruck,
+  FiStar
+  
 } from "react-icons/fi";
 import bannerImg from "../../../../assets/Homebanner.png";
+
+import { LiaShippingFastSolid } from "react-icons/lia";
+import { BadgeCheck } from "lucide-react";
+import headphoneimg from "../../../../assets/headphone.png"
 
 const stats = [
   { value: "1,840+", label: "Verified Sellers" },
@@ -49,13 +52,13 @@ const HeroBanner = () => {
           <div className="relative z-10 grid gap-10 lg:grid-cols-2 lg:items-start">
             {/* ----- Left: Text content ----- */}
             <div>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-indigo-500/90 px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-indigo-600  px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white">
                 <FiClock className="h-3 w-3" />
                 Seasonal Event · Verified Merchants
               </span>
 
               <h1 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl">
-                Mega Autumn Tech &amp; Lifestyle Super Sale
+                Mega Autumn Tech & Lifestyle Super Sale
               </h1>
 
               <p className="mt-4 max-w-md text-sm leading-6 text-slate-300">
@@ -65,7 +68,7 @@ const HeroBanner = () => {
               </p>
 
               <div className="mt-6 flex flex-wrap items-center gap-3">
-                <button className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-indigo-500">
+                <button className="inline-flex items-center gap-2 rounded-lg bg-component px-5 py-2.5 text-sm font-bold text-white transition hover:bg-indigo-500">
                   Explore Flash Deals
                   <FiArrowRight className="h-4 w-4" />
                 </button>
@@ -79,11 +82,11 @@ const HeroBanner = () => {
               {/* Stats */}
               <div className="mt-8 flex flex-wrap items-center gap-8">
                 {stats.map((stat) => (
-                  <div key={stat.label}>
+                  <div className="" key={stat.label}>
                     <p className="text-lg font-extrabold text-white">
                       {stat.value}
                     </p>
-                    <p className="text-[11px] leading-4 text-slate-400">
+                    <p className="text-[12px] leading-4 text-slate-300">
                       {stat.label}
                     </p>
                   </div>
@@ -94,20 +97,27 @@ const HeroBanner = () => {
             {/* ----- Right: Product Card ----- */}
             <div>
               <div className="rounded-2xl bg-white p-4 shadow-xl">
+                
                 <div className="flex items-center justify-between">
-                  <span className="rounded-md bg-amber-100 px-2 py-1 text-[9px] font-bold uppercase tracking-wide text-amber-700">
+                    
+                  <span className="rounded-md bg-amber-100 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-brand">
                     Featured Curation
                   </span>
-                  <span className="text-[9px] font-semibold uppercase tracking-wide text-slate-400">
-                    Dropping Now
+                  
+                  <span className="flex text-[10px] font-bold uppercase tracking-wide text-brand">
+                     Dropping Now
                   </span>
+                  
                 </div>
 
                 <div className="mt-3 flex gap-3">
-                  <div className="h-16 w-16 shrink-0 rounded-lg bg-slate-100" />
+                    
+                  <div className="h-16 w-16 shrink-0 rounded-lg bg-slate-" />
+                  <img className="h-16 w-18 rounded-2xl -ml-18" src={headphoneimg} alt="" />
 
                   <div className="min-w-0">
-                    <p className="text-[11px] font-semibold text-indigo-600">
+                    
+                    <p className="text-[12px] font-semibold text-component">
                       TechZone Official
                     </p>
                     <p className="truncate text-sm font-bold text-slate-900">
@@ -115,7 +125,7 @@ const HeroBanner = () => {
                     </p>
 
                     <div className="mt-1 flex items-center gap-2">
-                      <span className="text-base font-extrabold text-indigo-700">
+                      <span className="text-base font-extrabold text-component">
                         $189.00
                       </span>
                       <span className="text-xs text-slate-400 line-through">
@@ -129,16 +139,16 @@ const HeroBanner = () => {
                 </div>
 
                 <div className="mt-3 flex items-center justify-between border-t border-slate-100 pt-3">
-                  <span className="flex items-center gap-1 text-[11px] font-semibold text-slate-600">
-                    <FiStar className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
+                  <span className="flex items-center gap-1 text-[12px] font-semibold text-slate-600">
+                    <FiStar className="h-4 w-4 fill-amber-400 text-amber-400" />
                     4.8{" "}
                     <span className="font-normal text-slate-400">
                       (2,340 orders)
                     </span>
                   </span>
 
-                  <span className="flex items-center gap-1 text-[11px] font-semibold text-emerald-600">
-                    <FiTruck className="h-3.5 w-3.5" />
+                  <span className="flex items-center gap-1 text-[12px] font-semibold text-component">
+                    <LiaShippingFastSolid className="h-3.5 w-3.5" />
                     Express Free Delivery
                   </span>
                 </div>
@@ -146,22 +156,22 @@ const HeroBanner = () => {
 
               {/* Two small feature boxes */}
               <div className="mt-3 grid grid-cols-2 gap-3">
-                <div className="rounded-xl bg-white/10 p-3 backdrop-blur">
-                  <FiShield className="h-4 w-4 text-white" />
-                  <p className="mt-2 text-xs font-bold text-white">
+                <div className="rounded-xl bg-white/20 p-3 backdrop-blur">
+                  <BadgeCheck  className="h-4 w-4 text-white" />
+                  <p className="mt-2 text-sm font-bold text-white">
                     Buyer Protection
                   </p>
-                  <p className="mt-0.5 text-[10px] leading-4 text-slate-300">
+                  <p className="mt-0.5 text-[11px] leading-4 text-slate-300">
                     Full refund guarantee on all multi-merchant orders.
                   </p>
                 </div>
 
-                <div className="rounded-xl bg-white/10 p-3 backdrop-blur">
+                <div className="rounded-xl bg-white/20 p-3 backdrop-blur">
                   <FiPackage className="h-4 w-4 text-white" />
-                  <p className="mt-2 text-xs font-bold text-white">
+                  <p className="mt-2 text-sm font-bold text-white">
                     Consolidated Box
                   </p>
-                  <p className="mt-0.5 text-[10px] leading-4 text-slate-300">
+                  <p className="mt-0.5 text-[11px] leading-4 text-slate-300">
                     Merge pieces from separate stores into a single shipment.
                   </p>
                 </div>
@@ -171,6 +181,7 @@ const HeroBanner = () => {
         </div>
 
         {/* ===== Bottom white category bar (overlaps hero) ===== */}
+        
         <div className="relative z-10 -mt-8 mx-3 rounded-2xl bg-white p-5 shadow-lg sm:mx-8">
           <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
             <p className="text-[10px] font-bold uppercase tracking-wide text-slate-400">
@@ -198,6 +209,7 @@ const HeroBanner = () => {
               </button>
             ))}
           </div>
+          </div>
 
           <a
             href="#"
@@ -206,7 +218,8 @@ const HeroBanner = () => {
             View Directory →
           </a>
         </div>
-      </div>
+        
+    
     </section>
   );
 };
