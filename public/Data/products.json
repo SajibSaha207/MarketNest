@@ -1,13 +1,53 @@
+[
+{"id":"P001","name":"Samsung 55-inch Crystal UHD Smart TV","slug":"samsung-55-inch-crystal-uhd-tv","category":"TV","brand":"Samsung","price":74990,"oldPrice":84990,"currency":"BDT","image":"https://res.cloudinary.com/p9ceyljj/image/upload/v1791905196/Samsung_55-inch_Crystal_UHD_Smart_TV.jpg","rating":4.7,"totalReviews":128,"stock":12,"isFeatured":true,"isTrending":true,"flashSale": {
+    "enabled": true,
+    "salePrice": 75000,
+    "startTime": "2026-10-12T18:00:00+06:00",
+    "endTime": "2026-10-20T23:59:59+06:00"
+  }, "description":"55-inch 4K smart television for home entertainment.","specifications":{"screenSize":"55 inch","resolution":"4K UHD"},"createdAt":"2026-10-01"},
+{"id":"P002","name":"Walton 230L Refrigerator","slug":"walton-230l-refrigerator","category":"Refrigerator","brand":"Walton","price":38900,"oldPrice":42900,"currency":"BDT","image":"https://res.cloudinary.com/p9ceyljj/image/upload/v1791905196/Walton_230L_Refrigerator.jpg","rating":4.5,"totalReviews":76,"stock":9,"isFeatured":true,"isTrending":false,"flashSale": {
+    "enabled": true,
+    "salePrice": 32000,
+    "startTime": "2026-10-12T18:00:00+06:00",
+    "endTime": "2026-10-20T23:59:59+06:00"
+  }, "description":"Refrigerator with practical household storage.","specifications":{"capacity":"230 L","type":"Direct Cool"},"createdAt":"2026-09-28"},
+{
+  "id": "P003",
+  "name": "Philips Dry Iron 1000W",
+  "slug": "philips-dry-iron-1000w",
+  "category": "Iron",
+  "brand": "Philips",
+  "price": 1890,
+  "oldPrice": 2290,
+  "currency": "BDT",
+  "image": "https://res.cloudinary.com/p9ceyljj/image/upload/v1791905195/Philips_Dry_Iron_1000W.jpg",
+  "rating": 4.3,
+  "totalReviews": 54,
+  "stock": 30,
+  "isFeatured": false,
+  "isTrending": false,
+  "flashSale": {
+    "enabled": true,
+    "salePrice": 1590,
+    "startTime": "2026-10-12T18:00:00+06:00",
+    "endTime": "2026-10-20T23:59:59+06:00"
+  },
+  "description": "Lightweight dry iron for daily garment care.",
+  "specifications": {
+    "power": "1000 W"
+  },
+  "createdAt": "2026-09-20"
+},
 
-{"id":"P001","name":"Samsung 55-inch Crystal UHD Smart TV","slug":"samsung-55-inch-crystal-uhd-tv","category":"TV","brand":"Samsung","price":74990,"oldPrice":84990,"currency":"BDT","image":"https://placehold.co/600x600/e8edf4/25324a?text=Samsung+Smart+TV","rating":4.7,"totalReviews":128,"stock":12,"isFeatured":True,"isTrending":True,"description":"55-inch 4K smart television for home entertainment.","specifications":{"screenSize":"55 inch","resolution":"4K UHD"},"createdAt":"2026-10-01"},
-{"id":"P002","name":"Walton 230L Refrigerator","slug":"walton-230l-refrigerator","category":"Refrigerator","brand":"Walton","price":38900,"oldPrice":42900,"currency":"BDT","image":"https://placehold.co/600x600/e8edf4/25324a?text=Walton+Refrigerator","rating":4.5,"totalReviews":76,"stock":9,"isFeatured":True,"isTrending":False,"description":"Refrigerator with practical household storage.","specifications":{"capacity":"230 L","type":"Direct Cool"},"createdAt":"2026-09-28"},
-{"id":"P003","name":"Philips Dry Iron 1000W","slug":"philips-dry-iron-1000w","category":"Iron","brand":"Philips","price":1890,"oldPrice":2290,"currency":"BDT","image":"https://placehold.co/600x600/e8edf4/25324a?text=Philips+Dry+Iron","rating":4.3,"totalReviews":54,"stock":30,"isFeatured":False,"isTrending":False,"description":"Lightweight dry iron for daily garment care.","specifications":{"power":"1000 W"},"createdAt":"2026-09-20"},
-{"id":"P004","name":"Samsung Galaxy A56 5G","slug":"samsung-galaxy-a56-5g","category":"Mobile","brand":"Samsung","price":47999,"oldPrice":52999,"currency":"BDT","image":"https://placehold.co/600x600/e8edf4/25324a?text=Galaxy+A56+5G","rating":4.6,"totalReviews":203,"stock":18,"isFeatured":True,"isTrending":True,"description":"5G smartphone for productivity and entertainment.","specifications":{"display":"6.7 inch","storage":"256 GB"},"createdAt":"2026-10-05"},
-{"id":"P005","name":"Apple iPhone 16","slug":"apple-iphone-16","category":"Mobile","brand":"Apple","price":99900,"oldPrice":109900,"currency":"BDT","image":"https://placehold.co/600x600/e8edf4/25324a?text=iPhone+16","rating":4.8,"totalReviews":311,"stock":7,"isFeatured":True,"isTrending":True,"description":"Apple smartphone with a high-resolution camera system.","specifications":{"storage":"128 GB","connectivity":"5G"},"createdAt":"2026-10-03"},
-{"id":"P006","name":"LG 8kg Front Load Washing Machine","slug":"lg-8kg-front-load-washing-machine","category":"Washing Machine","brand":"LG","price":58900,"oldPrice":64900,"currency":"BDT","image":"https://placehold.co/600x600/e8edf4/25324a?text=LG+Washing+Machine","rating":4.4,"totalReviews":62,"stock":6,"isFeatured":True,"isTrending":False,"description":"Front-load washing machine for household laundry.","specifications":{"capacity":"8 kg","type":"Front load"},"createdAt":"2026-09-25"},
-{"id":"P007","name":"Men's Casual Cotton T-Shirt","slug":"mens-casual-cotton-t-shirt","category":"Fashion","brand":"Urban Basics","price":650,"oldPrice":850,"currency":"BDT","image":"https://placehold.co/600x600/e8edf4/25324a?text=Cotton+T-Shirt","rating":4.2,"totalReviews":41,"stock":50,"isFeatured":False,"isTrending":True,"description":"Cotton T-shirt for casual everyday wear.","specifications":{"material":"Cotton","sizes":"S, M, L, XL"},"createdAt":"2026-09-18"},
-{"id":"P008","name":"Men's Everyday Sneakers","slug":"mens-everyday-sneakers","category":"Shoes","brand":"StepUp","price":2190,"oldPrice":2790,"currency":"BDT","image":"https://placehold.co/600x600/e8edf4/25324a?text=Everyday+Sneakers","rating":4.1,"totalReviews":35,"stock":24,"isFeatured":False,"isTrending":True,"description":"Versatile everyday sneakers.","specifications":{"material":"Synthetic upper","sizes":"39–44"},"createdAt":"2026-09-16"},
-{"id":"P009","name":"Miniket Rice 5kg","slug":"miniket-rice-5kg","category":"Grocery","brand":"Daily Harvest","price":420,"oldPrice":460,"currency":"BDT","image":"https://placehold.co/600x600/e8edf4/25324a?text=Miniket+Rice+5kg","rating":4.5,"totalReviews":89,"stock":100,"isFeatured":False,"isTrending":False,"description":"Everyday rice pack for household cooking.","specifications":{"weight":"5 kg"},"createdAt":"2026-09-30"},
-{"id":"P010","name":"Anker Wireless Headphones","slug":"anker-wireless-headphones","category":"Electronics","brand":"Anker","price":5490,"oldPrice":6490,"currency":"BDT","image":"https://placehold.co/600x600/e8edf4/25324a?text=Wireless+Headphones","rating":4.6,"totalReviews":117,"stock":15,"isFeatured":True,"isTrending":False,"description":"Wireless headphones for music and calls.","specifications":{"connectivity":"Bluetooth","type":"Over-ear"},"createdAt":"2026-10-02"},
-{"id":"P011","name":"Electric Kettle 1.7L","slug":"electric-kettle-1-7l","category":"Home Appliances","brand":"Miyako","price":1590,"oldPrice":1990,"currency":"BDT","image":"https://placehold.co/600x600/e8edf4/25324a?text=Electric+Kettle","rating":4.0,"totalReviews":28,"stock":22,"isFeatured":False,"isTrending":False,"description":"1.7-litre kettle for quick hot water.","specifications":{"capacity":"1.7 L","power":"1500 W"},"createdAt":"2026-09-22"},
-{"id":"P012","name":"Classic Analog Wrist Watch","slug":"classic-analog-wrist-watch","category":"Accessories","brand":"TimeCraft","price":1750,"oldPrice":2250,"currency":"BDT","image":"https://placehold.co/600x600/e8edf4/25324a?text=Analog+Wrist+Watch","rating":4.3,"totalReviews":67,"stock":19,"isFeatured":False,"isTrending":True,"description":"Minimal analog watch for everyday styling.","specifications":{"display":"Analog","strap":"Stainless steel"},"createdAt":"2026-09-21"}
+
+
+{"id":"P004","name":"Samsung Galaxy A56 5G","slug":"samsung-galaxy-a56-5g","category":"Mobile","brand":"Samsung","price":47999,"oldPrice":52999,"currency":"BDT","image":"https://res.cloudinary.com/p9ceyljj/image/upload/v1791905276/Samsung_Galaxy_A56_5G.jpg","rating":4.6,"totalReviews":203,"stock":18,"isFeatured":true,"isTrending":true,"description":"5G smartphone for productivity and entertainment.","specifications":{"display":"6.7 inch","storage":"256 GB"},"createdAt":"2026-10-05"},
+{"id":"P005","name":"Apple iPhone 16","slug":"apple-iphone-16","category":"Mobile","brand":"Apple","price":99900,"oldPrice":109900,"currency":"BDT","image":"https://res.cloudinary.com/p9ceyljj/image/upload/v1791905194/Apple_iPhone_16.jpg","rating":4.8,"totalReviews":311,"stock":7,"isFeatured":true,"isTrending":true,"description":"Apple smartphone with a high-resolution camera system.","specifications":{"storage":"128 GB","connectivity":"5G"},"createdAt":"2026-10-03"},
+{"id":"P006","name":"LG 8kg Front Load Washing Machine","slug":"lg-8kg-front-load-washing-machine","category":"Washing Machine","brand":"LG","price":58900,"oldPrice":64900,"currency":"BDT","image":"https://res.cloudinary.com/p9ceyljj/image/upload/v1791905194/LG_8kg_Front_Load_Washing_Machine.png","rating":4.4,"totalReviews":62,"stock":6,"isFeatured":true,"isTrending":false,"description":"Front-load washing machine for household laundry.","specifications":{"capacity":"8 kg","type":"Front load"},"createdAt":"2026-09-25"},
+{"id":"P007","name":"Men's Casual Cotton T-Shirt","slug":"mens-casual-cotton-t-shirt","category":"Fashion","brand":"Urban Basics","price":650,"oldPrice":850,"currency":"BDT","image":"https://res.cloudinary.com/p9ceyljj/image/upload/v1791905194/Men_s_Casual_Cotton_T-Shirt.jpg","rating":4.2,"totalReviews":41,"stock":50,"isFeatured":false,"isTrending":true,"description":"Cotton T-shirt for casual everyday wear.","specifications":{"material":"Cotton","sizes":"S, M, L, XL"},"createdAt":"2026-09-18"},
+{"id":"P008","name":"Men's Everyday Sneakers","slug":"mens-everyday-sneakers","category":"Shoes","brand":"StepUp","price":2190,"oldPrice":2790,"currency":"BDT","image":"https://res.cloudinary.com/p9ceyljj/image/upload/v1791905195/Men_s_Everyday_Sneakers.jpg","rating":4.1,"totalReviews":35,"stock":24,"isFeatured":false,"isTrending":true,"description":"Versatile everyday sneakers.","specifications":{"material":"Synthetic upper","sizes":"39–44"},"createdAt":"2026-09-16"},
+{"id":"P009","name":"Miniket Rice 5kg","slug":"miniket-rice-5kg","category":"Grocery","brand":"Daily Harvest","price":420,"oldPrice":460,"currency":"BDT","image":"https://res.cloudinary.com/p9ceyljj/image/upload/v1791905194/Miniket_Rice_5kg.jpg","rating":4.5,"totalReviews":89,"stock":100,"isFeatured":false,"isTrending":false,"description":"Everyday rice pack for household cooking.","specifications":{"weight":"5 kg"},"createdAt":"2026-09-30"},
+{"id":"P010","name":"Anker Wireless Headphones","slug":"anker-wireless-headphones","category":"Electronics","brand":"Anker","price":5490,"oldPrice":6490,"currency":"BDT","image":"https://res.cloudinary.com/p9ceyljj/image/upload/v1791905889/Anker_Wireless_Headphones.jpg","rating":4.6,"totalReviews":117,"stock":15,"isFeatured":true,"isTrending":false,"description":"Wireless headphones for music and calls.","specifications":{"connectivity":"Bluetooth","type":"Over-ear"},"createdAt":"2026-10-02"},
+{"id":"P011","name":"Electric Kettle 1.7L","slug":"electric-kettle-1-7l","category":"Home Appliances","brand":"Miyako","price":1590,"oldPrice":1990,"currency":"BDT","image":"https://res.cloudinary.com/p9ceyljj/image/upload/v1791905194/Electric_Kettle_1.7L.jpg","rating":4.0,"totalReviews":28,"stock":22,"isFeatured":false,"isTrending":false,"description":"1.7-litre kettle for quick hot water.","specifications":{"capacity":"1.7 L","power":"1500 W"},"createdAt":"2026-09-22"},
+{"id":"P012","name":"Classic Analog Wrist Watch","slug":"classic-analog-wrist-watch","category":"Accessories","brand":"TimeCraft","price":1750,"oldPrice":2250,"currency":"BDT","image":"https://res.cloudinary.com/p9ceyljj/image/upload/v1791905194/Classic_Analog_Wrist_Watch.jpg","rating":4.3,"totalReviews":67,"stock":19,"isFeatured":false,"isTrending":true,"description":"Minimal analog watch for everyday styling.","specifications":{"display":"Analog","strap":"Stainless steel"},"createdAt":"2026-09-21"}
+]
