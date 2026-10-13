@@ -10,14 +10,14 @@ import { User, Menu, X } from 'lucide-react';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const activeClass = "text-blue-600 border-b-2 border-blue-600 pb-1 font-bold whitespace-nowrap";
-const normalClass = "text-gray-600 hover:text-blue-600 whitespace-nowrap";
+  const activeClass = "bg-indigo-50 text-indigo-700 rounded-full px-1.5 py-1.5 font-bold text-sm whitespace-nowrap";
+const normalClass = "text-gray-600 hover:text-blue-600 px-1.5 py-1.5 text-sm whitespace-nowrap";
 
   return (
-    <div className="bg-white w-full shadow-sm">
+    <div className="bg-white w-full shadow-sm sticky top-0 z-50">
 
       {/* Top Row */}
-      <div className="flex items-center justify-between px-4 py-2 gap-2">
+      <div className="flex items-center justify-between px-4 gap-2">
 
         {/* Logo */}
         <div className="flex items-center flex-shrink-0">

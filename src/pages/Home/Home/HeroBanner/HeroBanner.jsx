@@ -210,13 +210,6 @@ const HeroBanner = () => {
             ))}
           </div>
           </div>
-
-          <a
-            href="#"
-            className="mt-3 inline-block text-xs font-semibold text-indigo-600 hover:text-indigo-800"
-          >
-            View Directory →
-          </a>
         </div>
         
     
